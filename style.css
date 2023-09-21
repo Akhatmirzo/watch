@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.clock {
+    border: 2px solid blue;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    position: relative;
+    background-image: url(https://i.gifer.com/origin/fa/fa9e27a7534060df383ab54354fcead3.gif);
+    background-position: center;
+}
+
+.clock .number {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: rgb(255, 3, 3);
+    --rotation: 0;
+    transform: rotate(var(--rotation));
+}
+
+.clock .number1 {
+    --rotation: 30deg;
+}
+
+.clock .number2 {
+    --rotation: 60deg;
+}
+
+.clock .number3 {
+    --rotation: 90deg;
+}
+
+.clock .number4 {
+    --rotation: 120deg;
+}
+
+.clock .number5 {
+    --rotation: 150deg;
+}
+
+.clock .number6 {
+    --rotation: 180deg;
+}
+
+.clock .number7 {
+    --rotation: 210deg;
+}
+
+.clock .number8 {
+    --rotation: 240deg;
+}
+
+.clock .number9 {
+    --rotation: 270deg;
+}
+
+.clock .number10 {
+    --rotation: 300deg;
+}
+
+.clock .number11 {
+    --rotation: 330deg;
+}
+
+.clock .hand {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%) rotate(calc(var(--rotation) * 1deg));
+    background-color: teal;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    z-index: 10;
+    -webkit-transform: translate(-50%) rotate(calc(var(--rotation) * 1deg));
+    -moz-transform: translate(-50%) rotate(calc(var(--rotation) * 1deg));
+    -ms-transform: translate(-50%) rotate(calc(var(--rotation) * 1deg));
+    -o-transform: translate(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.clock::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: crimson;
+    z-index: 11;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.clock::before {
+    content: 'Rolex';
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #ffb142;
+    font-weight: 700;
+}
+
+.clock .hand.minute {
+    width: 7px;
+    height: 35%;
+    background-color: slateblue;
+}
+
+.clock .hand.second {
+    width: 4px;
+    height: 42%;
+    background-color: crimson;
+}
+
+.clock .hand.hour {
+    width: 10px;
+    height: 30%;
+    background-color: sienna;
+}
+
+.box{
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
